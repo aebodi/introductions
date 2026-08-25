@@ -7,58 +7,128 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             line-height: 1.6;
+            margin: 0;
+            padding-bottom: 40px;
         }
+        
         .container {
             width: 80%;
             margin: auto;
             overflow: hidden;
         }
+
+        .welcome-msg {
+            text-align: center;
+            font-size: 2.8rem;
+            color: #333;
+            margin: 30px 0;
+            font-weight: bold;
+        }
+
         .main-info {
             background: #333;
             color: #fff;
             padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
+        
         .main-info h1 {
             margin: 0;
+            padding-bottom: 5px; 
         }
-        .hobbies, .lewis, .course, .job {
+
+        .animated-name {
+            background: linear-gradient(90deg, #00f2fe, #4facfe, #f093fb, #f5576c);
+            background-size: 300% 300%;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: gradient-shift 6s ease infinite;
+            display: inline-block;
+            padding-top: 10px;
+        }
+
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .wave-letter {
+            position: relative;
+            animation: wave-bounce 1.5s ease-in-out infinite;
+        }
+
+        @keyframes wave-bounce {
+            0%, 100% { top: 0px; }
+            50% { top: -8px; } 
+        }
+
+        .hobbies, .lewis, .course, .job, .fun-fact {
             background: #e7e7e7;
             padding: 15px;
             margin-bottom: 10px;
+            border-radius: 5px; 
+        }
+        
+        .container section h2 {
+            margin-bottom: 5px;
+        }
+        
+        .container section p {
+            margin-top: 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="welcome-msg">Welcome!</div>
+
         <header class="main-info">
-            <h1>Andres Bodington</h1>
-            <h1>Andres</h1>
+            <h1>My name: 
+                <span class="animated-name">
+                    <span class="wave-letter" style="animation-delay: 0.0s">A</span><span class="wave-letter" style="animation-delay: 0.1s">n</span><span class="wave-letter" style="animation-delay: 0.2s">d</span><span class="wave-letter" style="animation-delay: 0.3s">r</span><span class="wave-letter" style="animation-delay: 0.4s">e</span><span class="wave-letter" style="animation-delay: 0.5s">s</span>
+                    <span class="wave-letter" style="animation-delay: 0.6s">B</span><span class="wave-letter" style="animation-delay: 0.7s">o</span><span class="wave-letter" style="animation-delay: 0.8s">d</span><span class="wave-letter" style="animation-delay: 0.9s">i</span><span class="wave-letter" style="animation-delay: 1.0s">n</span><span class="wave-letter" style="animation-delay: 1.1s">g</span><span class="wave-letter" style="animation-delay: 1.2s">t</span><span class="wave-letter" style="animation-delay: 1.3s">o</span><span class="wave-letter" style="animation-delay: 1.4s">n</span>
+                </span>
+            </h1>
+            <h1> My preferred name: Andres</h1>
         </header>
 
         <section class="lewis">
-			<h2>Senior</h2>
-			<h2>Major: Computer Science. Minor: Undecided</h2>
-			<h2>I really like computers and problem solving</h2>
+            <h2> * Class:</h2>
+            <p> Senior </p>
+            <h2> * Major: </h2> 
+            <p> Computer Science. </p> 
+            <h2> * Minor: </h2>
+            <p> Undecided</p>
+            <h2>Reason I chose CS: </h2> 
+            <p> I really like computers and problem solving. </p>
         </section>
 
-		<section class="course">
-            <h2>Reasons for Taking This Course</h2>
-            <p>I want to be a Software Engineer once I graduate</p>
+        <section class="course">
+            <h2> * Reasons for Taking This Course: </h2>
+            <p> I want to be a Software Engineer once I graduate</p>
         </section>
 
-		<section class="job">
-            <p>Current/Recent Job</p>
-			<p>BackEnd Engineering and AI</p>
-        </section>		
+        <section class="job">
+            <h2> * Current/Recent Job: </h2>
+            <p> This summer I had an internship in BackEnd Engineering and AI.</p>
+        </section>      
 
         <section class="hobbies">
-            <h2>Hobbies and Special Interests</h2>
-            <p>Formula One, Gaming, and Swimming</p>
+            <h2> * Hobbies and Special Interests: </h2>
+            <p> I like Formula One, Gaming, and Swimming.</p>
         </section>
 
         <section class="fun-fact">
-            <h2>Fun Fact</h2>
-            <p>I've been swimming since I was 8 years old</p>
+            <h2> * Fun Fact: </h2>
+            <p> I've been swimming since I was 8 years old</p>
+        </section>
+
+        <section class="updated">
+            <p>  Updated on 08/25/2026. &copy; 2026 Andres Bodington.</p>
         </section>
     </div>
 </body>
